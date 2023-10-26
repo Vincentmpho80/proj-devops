@@ -11,8 +11,8 @@ WORKDIR /app
 # Run 'yarn install' with the '--production' flag to install only production dependencies
 RUN yarn install --production
 
-# Expose port 3000
-EXPOSE 3000
+# Expose port 3030
+EXPOSE 3030
 
 # Define the command to run the Node.js application
 CMD [\"node\", \"src/index.js\"]
