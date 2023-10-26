@@ -5,6 +5,9 @@ FROM centos:latest
 RUN yum -y update
 RUN yum -y install httpd
 
+# Fix the repository configuration to prevent the 'appstream' error
+RUN echo "proxy=http://proxy.yourcompany.com:8080" >> /etc/yum.repos.d/CentOS-Base.repo
+
 # Expose port 80 to allow incoming connections
 EXPOSE 80
 
