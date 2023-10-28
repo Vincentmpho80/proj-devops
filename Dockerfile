@@ -3,6 +3,6 @@ FROM ubuntu
 
 MAINTAINER vincentmpho80@gmail.com
 
-RUN sudo apt-get update
+RUN apt-get update
 
 CMD ["echo", "Hello world...! from my docker image"]
