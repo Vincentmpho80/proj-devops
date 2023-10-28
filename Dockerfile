@@ -1,12 +1,8 @@
-# Use the official CentOS image as the base image
-FROM centos:latest
+# getting base image ubuntu
+FROM ubuntu
 
-# Update the package repository and install necessary packages
-RUN yum -y update && yum -y install httpd
+MAINTAINER vincentmpho80@gmail.com
 
-# Expose port 80 to allow incoming connections
-EXPOSE 80
+RUN sudo apt-get update
 
-# Start the Apache web server
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-
+CMD ["echo", "Hello world...! from my docker image"]
