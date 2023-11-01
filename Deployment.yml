@@ -15,10 +15,10 @@ spec:
         app: vince
     spec:
       imagePullSecrets:
-      - name: pocenvironment-token
+      - name:
       containers:
       - name: vince
-        image: vincentmpho/pipeline-to-k8s 
+        image: vincentmpho/devops-proj-pipeline 
         imagePullPolicy: Always
         ports:
           - containerPort: 80
