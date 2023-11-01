@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vince
+  labels:
+    app: vince
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vince
+  template:
+    metadata:
+      labels:
+        app: vince
+    spec:
+      imagePullSecrets:
+      - name: pocenvironment-token
+      containers:
+      - name: vince
+        image: vincentmpho/pipeline-to-k8s 
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 80
