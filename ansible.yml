@@ -2,6 +2,6 @@
   become: true
   tasks:
     - name: create new deployment
-      command: kubectl apply -f /home/azureuser/Deployment.yml
+      command: kubectl --kubeconfig=/home/azureuser/.kube/config apply -f /home/azureuser/Deployment.yml
     - name: create new service
-      command: kubectl apply -f /home/azureuser/Service.yml
+      command: kubectl --kubeconfig=/home/azureuser/.kube/config apply -f /home/azureuser/Service.yml
