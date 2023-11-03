@@ -1,15 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: vince
+  name: register-app-service
+  labels:
+    app: register-app 
 spec:
   selector:
-    app.kubernetes.io/name: 
+    app: register-app
+
   ports:
-    - protocol: 
-      port: 8080
-      targetPort: 80
-      nodePort: 31200
-  selector:
-    app: vince
+    - port: 8080
+      targetPort: 8080
+
   type: LoadBalancer
+

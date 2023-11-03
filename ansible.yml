@@ -1,5 +1,5 @@
 - hosts: all
-  become: true
+  user: azureuser
   tasks:
     - name: create new deployment
       command: kubectl --kubeconfig=/home/azureuser/.kube/config apply -f /home/azureuser/Deployment.yml

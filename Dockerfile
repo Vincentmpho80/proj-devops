@@ -1,8 +1,4 @@
-FROM ubuntu
-
-MAINTAINER vincentmpho80@gmail.com
-
-RUN apt-get update
-
-CMD ["echo", "Hello world...! from my docker image"]
+FROM tomcat:latest
+RUN cp -R  /usr/local/tomcat/webapps.dist/*  /usr/local/tomcat/webapps
+COPY /webapp/target/*.war /usr/local/tomcat/webapps
 
