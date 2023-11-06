@@ -19,10 +19,9 @@ spec:
             limits:
               memory: "500Mi"
               cpu: "250m"
-           requests:
+            requests:   # Corrected indentation here
               memory: "1Gi"
               cpu: "125m"
-                
           ports:
             - containerPort: 8080
 
