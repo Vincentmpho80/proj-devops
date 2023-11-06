@@ -19,7 +19,7 @@ spec:
             limits:
               memory: "2Gi"
               cpu: "500m"
-            requests:
+            requests:   # Corrected indentation here
               memory: "1Gi"
               cpu: "250m"
           ports:
@@ -36,6 +36,5 @@ spec:
               path: /healthz   # Change the path to your application's health endpoint
               port: 8080
             initialDelaySeconds: 10  # Adjust the initial delay before the first probe
-            periodSeconds: 15        # Adjust the interval between probes
+            peridSeconds: 15        # Adjust the interval between probes
             timeoutSeconds: 10        # Adjust the probe timeout
-
