@@ -17,11 +17,11 @@ spec:
           image: vincentmpho/devops-proj-pipeline
           resources:
             limits:
+              memory: "2Gi"
+              cpu: "500m"
+            requests:   # Corrected indentation here
               memory: "1Gi"
               cpu: "250m"
-            requests:   # Corrected indentation here
-              memory: "500Mi"
-              cpu: "125m"
           ports:
             - containerPort: 8080
 
