@@ -17,8 +17,12 @@ spec:
           image: vincentmpho/devops-proj-pipeline
           resources:
             limits:
+              memory: "500MB"
+              cpu: "250m"
+           requests:
               memory: "1GB"
-              cpu: "2GB"
+              cpu: "125m"
+                
           ports:
             - containerPort: 8080
 
