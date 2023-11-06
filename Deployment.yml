@@ -24,4 +24,17 @@ spec:
               cpu: "250m"
           ports:
             - containerPort: 8080
-
+          readinessProbe:
+            httpGet:
+              path: /healthz   # Change the path to your application's health endpoint
+              port: 8080
+            initialDelaySeconds: 5  # Adjust the initial delay before the first probe
+            periodSeconds: 10       # Adjust the interval between probes
+            timeoutSeconds: 5       # Adjust the probe timeout
+          livenessProbe:
+            httpGet:
+              path: /healthz   # Change the path to your application's health endpoint
+              port: 8080
+            initialDelaySeconds: 10  # Adjust the initial delay before the first probe
+            peridSeconds: 15        # Adjust the interval between probes
+            timeoutSeconds: 10        # Adjust the probe timeout
