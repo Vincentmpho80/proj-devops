@@ -17,10 +17,10 @@ spec:
           image: vincentmpho/devops-proj-pipeline
           resources:
             limits:
-              memory: "500MB"
+              memory: "500Mi"
               cpu: "250m"
            requests:
-              memory: "1GB"
+              memory: "1Gi"
               cpu: "125m"
                 
           ports:
