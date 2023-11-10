@@ -23,7 +23,7 @@ spec:
               memory: "1Gi"
               cpu: "250m"
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           readinessProbe:
             httpGet:
               path: "/health_check"   # Change the path to your application's health endpoint
