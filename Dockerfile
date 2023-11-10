@@ -2,7 +2,7 @@
 FROM nginx:latest
 
 # Copy custom configuration files (if needed)
- COPY nginx.conf /etc/nginx/nginx.conf
+# COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose ports (if needed)
  EXPOSE 80
