@@ -1,12 +1,12 @@
-# Use the official Ubuntu 20.04 image as the base image
-FROM ubuntu:20.04
+# Use the official NGINX image
+FROM nginx:latest
 
-# Update package list and install necessary packages
-RUN apt-get update && apt-get install -y curl wget python3
+# Copy custom configuration files (if needed)
+ COPY nginx.conf /etc/nginx/nginx.conf
 
-# Expose port 8080 to allow incoming connections
-EXPOSE 8080
+# Expose ports (if needed)
+ EXPOSE 80
 
-# Set the command to run your application (e.g., a Python HTTP server)
-CMD ["python3", "vince-app.py"]
+# Command to start NGINX (default behavior of the nginx image)
+CMD ["nginx", "-g", "daemon off;"]
 

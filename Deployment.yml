@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vince-app-deployment
+  name: nginx-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: vince-app
+      app: nginx 
   template:
     metadata:
       labels:
-        app: vince-app
+        app: nginx
     spec:
       containers:
-        - name: vince-app
+        - name: nginx
           image: vincentmpho/devops-proj-pipeline
           resources:
             limits:
@@ -23,7 +23,7 @@ spec:
               memory: "1Gi"
               cpu: "250m"
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           readinessProbe:
             httpGet:
               path: /healthz   # Change the path to your application's health endpoint
