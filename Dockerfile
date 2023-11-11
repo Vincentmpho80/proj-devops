@@ -5,7 +5,7 @@ FROM nginx:latest
 # COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose ports (if needed)
- EXPOSE 8080
+ EXPOSE 80
 
 # Command to start NGINX (default behavior of the nginx image)
 CMD ["nginx", "-g", "daemon off;"]
